@@ -14,7 +14,7 @@
     "prod:build": "npm run prod:copy && npm run build:thebe && npm run build:css && npm exec -- remix build",
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "dev": "bun run dev:copy && bun run build:thebe && concurrently \"bun run dev:css\" \"bun run remix dev\"",
-    "start": "npm run setup && npm run build:css && npm exec -- remix dev"
+    "start": "npm run setup && npm run build:css && npm exec -- remix build && npm exec -- remix-serve build/index.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
