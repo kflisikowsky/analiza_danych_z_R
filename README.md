@@ -1,12 +1,10 @@
-# Podstawy programowania i analizy danych w języku R
-
 --- 
 
 ![PGEDU+](img/logo/pgedu.png)
 ![FERS](img/logo/fers2.png)
 ---
 
-Analiza i wizualizacja danych w Pythonie - kurs realizowany w ramach projektu PGEdu+ 2025-2026
+Analiza i wizualizacja danych w R - kurs realizowany w ramach projektu PGEdu+ 2025-2026
 
 ---
 
