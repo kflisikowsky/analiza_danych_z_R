@@ -117,7 +117,9 @@ export const ArticlePage = React.memo(function ({
                 hideAuthors={hide_authors}
               />
               {article.kind === SourceFileKind.Notebook && (
-                <InlineBinderLaunch />
+                <div className="myst-custom-binder-row">
+                  <InlineBinderLaunch />
+                </div>
               )}
             </div>
           )}
