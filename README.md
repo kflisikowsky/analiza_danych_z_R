@@ -1,7 +1,16 @@
 # Analiza danych z R
 
-## <img src="analiza.png" alt="R" width="28"> Analiza danych i programowanie w języku R
+--- 
+
+![PGEDU+](img/logo/pgedu.png)
+![FERS](img/logo/fers2.png)
+---
+
+Analiza i wizualizacja danych w Pythonie - kurs realizowany w ramach projektu PGEdu+ 2025-2026
+
+---
 
 <p align="center">
 	<img src="analiza.png" alt="Analiza danych z R" width="320">
 </p>
+
