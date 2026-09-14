@@ -9,6 +9,6 @@ Analiza i wizualizacja danych w R - kurs realizowany w ramach projektu PGEdu+ 20
 ---
 
 <p align="center">
-	<img src="analiza.png" alt="Analiza danych z R" width="320">
+	<img src="analiza.png" width="320">
 </p>
 
