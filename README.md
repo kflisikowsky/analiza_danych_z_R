@@ -1,4 +1,4 @@
-# Analiza danych z R
+# Podstawy programowania i analizy danych w języku R
 
 --- 
 
