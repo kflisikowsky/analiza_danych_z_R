@@ -1,10 +1,8 @@
 ---
 title: Analiza i wizualizacja danych w R
+subtitle: Kurs analizy danych, statystyki i programowania w języku R
 description: Kurs analizy danych, statystyki i programowania w języku R
-content_includes_title: false
 ---
-
-### Analiza i wizualizacja danych w R - kurs realizowany w ramach projektu PGEdu+ 2025-2026
 
 --- 
 ![PGEDU+](img/logo/pgedu.png)
