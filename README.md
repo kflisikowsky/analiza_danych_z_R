@@ -10,5 +10,5 @@ description: Kurs analizy danych, statystyki i programowania w języku R
 ---
 
 <p align="center">
-	<img src="analiza.png" width="320">
+	<img src="./analiza.png" alt="Logo Analiza danych z R" width="320">
 </p>
