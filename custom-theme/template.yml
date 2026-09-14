@@ -14,21 +14,11 @@ tags:
   - book
 options:
   - type: boolean
-  - app/**/*
-  - styles/**/*
-  - '*.config.js'
-  - '*.d.ts'
-  - tsconfig.json
+    id: hide_toc
+    description: Hide the table of contents
   - type: boolean
     id: hide_footer_links
     description: Hide the previous/next links in the footer
-    cp remix.config.prod.js remix.config.js &&
-    npm exec copy-thebe-assets ./public &&
-  - type: boolean
-    node_modules/@jupyter-widgets/controls/css/widgets-base.css &&
-    rm -f node_modules/@jupyter-widgets/controls/css/widgets-base.css.bak &&
-    npm run build:css &&
-    npm exec -- remix build
   - type: boolean
     id: hide_title_block
     description: Hide the document title on all pages
