@@ -1,0 +1,7 @@
+name: analiza-danych-r
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - notebook
+  - r-base=4.3
+  - r-irkernel

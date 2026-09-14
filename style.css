@@ -44,6 +44,15 @@ a:hover {
   color: var(--r-orange);
 }
 
+.myst-search-text-placeholder {
+  font-size: 0;
+}
+
+.myst-search-text-placeholder::after {
+  content: "Szukaj";
+  font-size: 0.875rem;
+}
+
 pre,
 code {
   font-family: "SFMono-Regular", "Cascadia Code", "Roboto Mono", monospace;
@@ -54,6 +63,20 @@ pre {
   border: 1px solid #263b4a;
   border-left: 4px solid var(--r-orange);
   border-radius: 6px;
+}
+
+.myst-code {
+  background: var(--r-code);
+  border-color: #263b4a;
+  border-left-color: var(--r-orange);
+  border-radius: 6px;
+}
+
+.myst-code-body {
+  color: #e8f0f7;
+  font-family: "SFMono-Regular", "Cascadia Code", "Roboto Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 code {
