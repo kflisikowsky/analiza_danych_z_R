@@ -1,0 +1,79 @@
+:root {
+  --r-ink: #17212b;
+  --r-muted: #5f6b76;
+  --r-blue: #276dc3;
+  --r-blue-dark: #1f4f91;
+  --r-orange: #ed8b00;
+  --r-paper: #f7f9fc;
+  --r-line: #dbe3ec;
+  --r-code: #14212b;
+}
+
+body {
+  background: var(--r-paper);
+  color: var(--r-ink);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--r-blue-dark);
+  font-family: "Avenir Next Demi Bold", "Avenir Next", sans-serif;
+  letter-spacing: 0;
+}
+
+h1 {
+  border-bottom: 3px solid var(--r-orange);
+  padding-bottom: 0.35rem;
+}
+
+h2 {
+  border-left: 4px solid var(--r-blue);
+  padding-left: 0.7rem;
+}
+
+a {
+  color: var(--r-blue-dark);
+}
+
+a:hover {
+  color: var(--r-orange);
+}
+
+pre,
+code {
+  font-family: "SFMono-Regular", "Cascadia Code", "Roboto Mono", monospace;
+}
+
+pre {
+  background: var(--r-code);
+  border: 1px solid #263b4a;
+  border-left: 4px solid var(--r-orange);
+  border-radius: 6px;
+}
+
+code {
+  color: var(--r-blue-dark);
+}
+
+pre code {
+  color: #e8f0f7;
+}
+
+blockquote {
+  border-left-color: var(--r-orange);
+  color: var(--r-muted);
+}
+
+hr {
+  border-color: var(--r-line);
+}
+
+/* The project name already appears in the book shell; keep the article title single. */
+header h1 + p {
+  color: var(--r-muted);
+}

@@ -21,3 +21,4 @@ site:
   options:
     favicon: analiza.png
     logo: analiza.png
+    style: style.css
