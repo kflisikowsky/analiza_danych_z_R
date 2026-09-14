@@ -27,4 +27,5 @@ site:
   options:
     favicon: analiza.png
     logo: analiza.png
+    logo_text: Analiza danych z R
     style: style.css

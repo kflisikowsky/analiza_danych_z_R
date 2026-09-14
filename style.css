@@ -44,6 +44,26 @@ a:hover {
   color: var(--r-orange);
 }
 
+.myst-home-link > span {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0 1.25rem 0 0;
+  overflow: visible;
+  clip: auto;
+  white-space: nowrap;
+  color: var(--r-blue-dark);
+  font-family: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.myst-home-link > span::before {
+  content: "~/";
+  color: var(--r-orange);
+}
+
 .myst-search-text-placeholder {
   font-size: 0;
 }
