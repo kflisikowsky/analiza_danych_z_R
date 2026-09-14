@@ -1,5 +1,5 @@
 ---
-title: Analiza i wizualizacja danych w R
+title: Analiza i wizualizacja danych z R
 subtitle: Kurs analizy danych, statystyki i programowania w języku R
 description: Kurs analizy danych, statystyki i programowania w języku R
 ---
