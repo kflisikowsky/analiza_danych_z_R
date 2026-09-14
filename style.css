@@ -68,14 +68,7 @@ a:hover {
   background: transparent;
   color: var(--r-muted);
   cursor: pointer;
-}
-
-.myst-custom-binder-row {
-  position: absolute;
-  top: 2.2rem;
-  right: 8rem;
-  display: flex;
-  justify-content: flex-end;
+  margin-left: 0.75rem;
 }
 
 .myst-custom-binder-launch:disabled {

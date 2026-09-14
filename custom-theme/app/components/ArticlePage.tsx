@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { RocketLaunchIcon } from '@heroicons/react/24/outline';
 import {
   ArticleProvider,
@@ -70,6 +71,16 @@ function InlineBinderLaunch() {
   );
 }
 
+function InlineBinderPortal() {
+  const [target, setTarget] = React.useState<HTMLElement | null>(null);
+
+  React.useEffect(() => {
+    setTarget(document.querySelector('.myst-fm-block-header'));
+  }, []);
+
+  return target ? createPortal(<InlineBinderLaunch />, target) : null;
+}
+
 export const ArticlePage = React.memo(function ({
   article,
   hide_all_footer_links,
@@ -117,9 +128,7 @@ export const ArticlePage = React.memo(function ({
                 hideAuthors={hide_authors}
               />
               {article.kind === SourceFileKind.Notebook && (
-                <div className="myst-custom-binder-row">
-                  <InlineBinderLaunch />
-                </div>
+                <InlineBinderPortal />
               )}
             </div>
           )}
