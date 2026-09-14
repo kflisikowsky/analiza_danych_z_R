@@ -1,0 +1,63 @@
+{
+  "name": "@myst-theme/book",
+  "version": "1.3.1",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "compile": "tsc --noEmit --skipLibCheck",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev:copy": "cp remix.config.dev.js remix.config.js",
+    "prod:copy": "cp remix.config.prod.js remix.config.js",
+    "clean": "rm -rf public/build build api",
+    "build:thebe": "copy-thebe-assets ./public",
+    "setup": "cp remix.config.prod.js remix.config.js && npm run build:thebe && sed -i.bak '/@import.*lumino.css/d; /@import.*nouislider.css/d' node_modules/@jupyter-widgets/controls/css/widgets-base.css && rm -f node_modules/@jupyter-widgets/controls/css/widgets-base.css.bak",
+    "prod:build": "npm run prod:copy && npm run build:thebe && npm run build:css && npm exec -- remix build",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "dev": "bun run dev:copy && bun run build:thebe && concurrently \"bun run dev:css\" \"bun run remix dev\"",
+    "start": "npm run setup && npm run build:css && npm exec -- remix dev"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@myst-theme/anywidget": "^1.3.1",
+    "@myst-theme/common": "^1.3.1",
+    "@myst-theme/frontmatter": "^1.3.1",
+    "@myst-theme/icons": "^1.3.1",
+    "@myst-theme/jupyter": "^1.3.1",
+    "@myst-theme/landing-pages": "^1.3.1",
+    "@myst-theme/providers": "^1.3.1",
+    "@myst-theme/search": "^1.3.1",
+    "@myst-theme/search-minisearch": "^1.3.1",
+    "@myst-theme/site": "^1.3.1",
+    "@myst-theme/styles": "^1.3.1",
+    "@remix-run/node": "~1.17.0",
+    "@remix-run/react": "~1.17.0",
+    "@remix-run/vercel": "~1.17.0",
+    "classnames": "^2.3.2",
+    "myst-common": "^1.8.1",
+    "myst-config": "^1.8.1",
+    "myst-migrate": "^1.7.1",
+    "myst-spec-ext": "^1.8.1",
+    "myst-to-react": "^1.3.1",
+    "node-fetch": "^2.6.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "thebe-core": "^0.5.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "~1.17.0",
+    "@remix-run/eslint-config": "~1.17.0",
+    "@remix-run/serve": "~1.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node-fetch": "^2.6.4",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "@vercel/node": "^2.15.1",
+    "autoprefixer": "^10.6.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "packageManager": "bun@1.3.10"
+}

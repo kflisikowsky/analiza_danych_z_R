@@ -53,6 +53,31 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.myst-custom-frontmatter .myst-fm-launch-button {
+  display: none;
+}
+
+.myst-custom-binder-launch {
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  color: var(--r-muted);
+}
+
+.myst-custom-binder-launch:hover {
+  color: var(--r-orange);
+}
+
+.myst-custom-binder-launch svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
 pre,
 code {
   font-family: "SFMono-Regular", "Cascadia Code", "Roboto Mono", monospace;

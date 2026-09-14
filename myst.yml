@@ -23,7 +23,7 @@ project:
     - file: rozdzial-1.ipynb
     
 site:
-  template: book-theme
+  template: ./custom-theme
   options:
     favicon: analiza.png
     logo: analiza.png
