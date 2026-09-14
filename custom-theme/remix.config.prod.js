@@ -6,6 +6,7 @@ module.exports = {
   serverModuleFormat: 'cjs',
   serverMinify: true,
   publicPath: '/myst_assets_folder/',
+  serverDependenciesToBundle: [/.*/],
   ignoredRouteFiles: ['**/.*'],
   future: {
     v2_routeConvention: true,
