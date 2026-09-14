@@ -30,6 +30,7 @@ import {
 } from '@myst-theme/jupyter';
 import { MyST } from 'myst-to-react';
 import { FrontmatterBlock } from '@myst-theme/frontmatter';
+import { useThebeServer } from 'thebe-react';
 import type { SiteAction } from 'myst-config';
 import type { TemplateOptions } from '../types.js';
 
@@ -52,8 +53,21 @@ function combineDownloads(
 
 const TOP_OFFSET = 33;
 
-function binderNotebookURL(location: string) {
-  return `https://mybinder.org/v2/gh/kflisikowsky/analiza_danych_z_R/main?urlpath=lab/tree${location}`;
+function InlineBinderLaunch() {
+  const { connect, connecting, error } = useThebeServer();
+
+  return (
+    <button
+      className="myst-custom-binder-launch"
+      type="button"
+      onClick={() => connect?.()}
+      disabled={connecting}
+      aria-label="Uruchom Binder w tym rozdziale"
+      title={error ? `Błąd uruchamiania Bindera: ${error}` : 'Uruchom Binder w tym rozdziale'}
+    >
+      <RocketLaunchIcon aria-hidden="true" />
+    </button>
+  );
 }
 
 export const ArticlePage = React.memo(function ({
@@ -103,16 +117,7 @@ export const ArticlePage = React.memo(function ({
                 hideAuthors={hide_authors}
               />
               {article.kind === SourceFileKind.Notebook && (
-                <a
-                  className="myst-custom-binder-launch"
-                  href={binderNotebookURL(location)}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Uruchom notebook w Binderze"
-                  title="Uruchom notebook w Binderze"
-                >
-                  <RocketLaunchIcon aria-hidden="true" />
-                </a>
+                <InlineBinderLaunch />
               )}
             </div>
           )}
@@ -130,7 +135,7 @@ export const ArticlePage = React.memo(function ({
           )}
           {compute?.enabled &&
             compute.features.notebookCompute &&
-            article.kind === SourceFileKind.Notebook && <NotebookToolbar showLaunch />}
+            article.kind === SourceFileKind.Notebook && <NotebookToolbar />}
           {compute?.enabled && article.kind === SourceFileKind.Article && (
             <ErrorTray pageSlug={article.slug} />
           )}
