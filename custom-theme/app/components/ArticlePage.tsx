@@ -129,6 +129,7 @@ export const ArticlePage = React.memo(function ({
               style={{ top }}
             >
               <DocumentOutline
+                title="SPIS TREŚCI"
                 className="relative mt-9"
                 maxdepth={outline_maxdepth}
                 isMargin={isOutlineMargin}
