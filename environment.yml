@@ -5,3 +5,5 @@ dependencies:
   - notebook
   - r-base=4.3
   - r-irkernel
+  - r-knitr
+  - r-kableextra
