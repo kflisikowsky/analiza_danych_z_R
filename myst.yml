@@ -27,6 +27,7 @@ project:
       children:
         - file: rozdzial-2-kable.ipynb
         - file: rozdzial-2-gtsummary.ipynb
+        - file: rozdzial-2-regex.ipynb
     
 site:
   template: ./custom-theme
