@@ -7,3 +7,6 @@ dependencies:
   - r-irkernel
   - r-knitr
   - r-kableextra
+  - r-gtsummary
+  - r-gt
+  - r-broom
